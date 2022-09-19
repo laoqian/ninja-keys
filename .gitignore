@@ -4,3 +4,7 @@ node_modules/
 # top level source
 /dist
 /package
+
+.idea
+
+/docs/ninja-keys.bundled.js

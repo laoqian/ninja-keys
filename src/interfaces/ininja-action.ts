@@ -6,7 +6,7 @@ export interface INinjaAction {
   mdIcon?: string;
   icon?: string;
   parent?: string;
-  keywords?: string;
+  keywords?: string | RegExp;
   children?: string[];
   section?: string;
 }

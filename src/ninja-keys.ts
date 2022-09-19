@@ -361,7 +361,8 @@ export class NinjaKeys extends LitElement {
     const actionMatches = this._flatData.filter((action) => {
       const regex = new RegExp(this._search, 'gi');
       const matcher =
-        action.title.match(regex) || action.keywords?.match(regex);
+        action.title.match(regex) || (action.keywords as string)?.match?.(regex) ||
+          (action.keywords as RegExp)?.test?.(this._search);
 
       if (!this._currentRoot && this._search) {
         // global search for items on root
