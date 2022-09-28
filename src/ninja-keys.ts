@@ -403,6 +403,7 @@ export class NinjaKeys extends LitElement {
             @actionsSelected=${(event: CustomEvent<INinjaAction>) =>
               this._actionSelected(event.detail)}
             .action=${action}
+            .search=${this._search}
           ></ninja-action>`
       )}`;
 

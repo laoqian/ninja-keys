@@ -1,6 +1,7 @@
 export interface INinjaAction {
   id: string;
   title: string;
+  isSearch?: boolean;
   hotkey?: string;
   handler?: Function;
   mdIcon?: string;

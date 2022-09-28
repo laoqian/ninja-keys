@@ -83,6 +83,9 @@ export class NinjaAction extends LitElement {
   @property({type: Object})
   action!: INinjaAction;
 
+  @property({type: String})
+  search!: string;
+
   @property({type: Boolean})
   selected = false;
 
@@ -165,6 +168,14 @@ export class NinjaAction extends LitElement {
       'ninja-action': true,
     };
 
+    const renderText = ()=>{
+      return html`
+       <span>
+          在 ${this.action.title}中搜索【<span style="color: #3b82f6">${this.search}</span>】
+       </span>
+      `
+    }
+
     return html`
       <div
         class="ninja-action"
@@ -172,7 +183,7 @@ export class NinjaAction extends LitElement {
         class=${classMap(classes)}
       >
         ${icon}
-        <div class="ninja-title">${this.action.title}</div>
+        <div class="ninja-title">${this.action.isSearch && this.search!=='' ?renderText():this.action.title}</div>
         ${hotkey}
       </div>
     `;
