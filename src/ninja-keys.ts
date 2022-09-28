@@ -371,7 +371,7 @@ export class NinjaKeys extends LitElement {
         return matcher;
       }
 
-      return action.parent === this._currentRoot && matcher;
+      return action.parent === this._currentRoot && matcher && !action.isSearch;
     });
 
     const sections = actionMatches.reduce(
