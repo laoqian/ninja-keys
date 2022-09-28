@@ -21,7 +21,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="ninja-keys.bundled.js"></script>
@@ -95,34 +94,6 @@
 
         <div class="text-xs">
           <h4 class="text-lg pb-2 font-semibold">Install</h4>
-          <p>
-            <code>&lt;ninja-keys&gt;</code> is distributed on npm, so you can
-            install it locally or use it via npm CDNs like unpkg.com.
-          </p>
-          <h2>Local Installation</h2>
-          <pre
-            class="language-bash text-xs rounded"
-          ><code class="language-bash">npm i ninja-keys</code></pre>
-          <h2 class="font-bold pt-2">CDN</h2>
-          <p>
-            npm CDNs like <a href="">unpkg.com</a> can directly serve files that
-            have been published to npm. This works great for standard JavaScript
-            modules that the browser can load natively.
-          </p>
-          <p>
-            For this element to work from unpkg.com specifically, you need to
-            include the <code>?module</code> query parameter, which tells
-            unpkg.com to rewrite &quot;bare&quot; module specificers to full
-            URLs.
-          </p>
-          <h3 class="font-bold pt-2">HTML</h3>
-          <pre
-            class="language-html text-xs rounded"
-          ><code class="language-html">&lt;script type=&quot;module&quot; src=&quot;https://unpkg.com/ninja-keys?module&quot;&gt;&lt;/script&gt;</code></pre>
-          <h3 class="font-bold pt-2">JavaScript</h3>
-          <pre
-            class="language-js text-xs rounded"
-          ><code class="language-html">import {NinjaKeys} from &#39;https://unpkg.com/ninja-keys?module&#39;;</code></pre>
         </div>
       </main>
     </div>
@@ -134,7 +105,9 @@
       </p>
     </footer>
 
-    <ninja-keys> </ninja-keys>
+    <div>
+      <ninja-keys> </ninja-keys>
+    </div>
 
     <script>
       const ninja = document.querySelector('ninja-keys');
@@ -192,7 +165,6 @@
     </script>
 
     <script>
-      hljs.highlightAll();
     </script>
   </body>
 </html>

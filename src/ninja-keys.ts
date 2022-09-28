@@ -103,7 +103,9 @@ export class NinjaKeys extends LitElement {
     if (this._actionMatches.length > 0) {
       this._selected = this._actionMatches[0];
     }
+
     this.setParent(options.parent);
+    this.dispatchEvent(new CustomEvent('open', {}));
   }
 
   /**
