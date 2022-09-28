@@ -171,7 +171,7 @@ export class NinjaAction extends LitElement {
     const renderText = ()=>{
       return html`
        <span>
-          在${this.action.title}中搜索【<span style="color: #3b82f6">${this.search}</span>】
+          在${this.action.title}中搜索<span style="color: #3b82f6">${this.search}</span>
        </span>
       `
     }
