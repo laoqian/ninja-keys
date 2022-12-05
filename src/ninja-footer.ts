@@ -55,4 +55,8 @@ export const footerHtml = html` <div class="modal-footer" slot="footer">
     </svg>
     返回上一级
   </span>
+   <span class="help">
+       <span class="ninja-examplekey esc">Ctrl+K</span>
+       显示界面
+   </span> 
 </div>`;

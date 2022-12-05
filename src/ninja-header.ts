@@ -128,7 +128,7 @@ export class NinjaHeader extends LitElement {
     const input = event.target as HTMLInputElement;
     this.dispatchEvent(
       new CustomEvent('change', {
-        detail: {search: input.value},
+        detail: {search: input.value?.trim()},
         bubbles: false,
         composed: false,
       })
